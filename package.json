@@ -56,8 +56,5 @@
     "lint:sass": "sass-lint -v -q",
     "lint:js": "eslint --ext .js src/js/",
     "stats": "webpack --config config/webpack.prod.config.js --mode=production --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
-  },
-  "dependencies": {
-    "normalize.css": "^8.0.1"
   }
 }
