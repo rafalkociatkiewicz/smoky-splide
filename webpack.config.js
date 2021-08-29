@@ -21,7 +21,7 @@ const htmlPluginEntries = templateFiles.map((template) => new HTMLWebpackPlugin(
   hash: false,
   filename: template,
   template: path.resolve(environment.paths.source, template),
-  favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
+  favicon: path.resolve(environment.paths.source, 'static', 'favicon.ico'),
 }));
 
 module.exports = {
@@ -105,14 +105,17 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(environment.paths.source, 'images', 'content'),
-          to: path.resolve(environment.paths.output, 'images', 'content'),
+          from: path.resolve(environment.paths.source, 'static' ),
+          to: path.resolve(environment.paths.output, 'static'),
           toType: 'dir',
           globOptions: {
             ignore: ['*.DS_Store', 'Thumbs.db'],
           },
         },
-      ],
+        { from: 'src/robots.txt', to: 'robots.txt'},
+        { from: 'src/browserconfig.xml', to: 'browserconfig.xml'},
+        { from: 'src/manifest.json', to: 'manifest.json'},
+      ]
     }),
   ].concat(htmlPluginEntries),
   target: 'web',
