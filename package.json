@@ -58,6 +58,7 @@
     "stats": "webpack --config config/webpack.prod.config.js --mode=production --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
   },
   "dependencies": {
-    "@splidejs/splide": "^2.4.21"
+    "@splidejs/splide": "^2.4.21",
+    "particles.js": "^2.0.0"
   }
 }

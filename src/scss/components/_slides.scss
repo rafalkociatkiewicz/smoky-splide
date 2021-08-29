@@ -1,30 +1,32 @@
 body {
-    background: black;
+    background: white;
     color: darkblue;
     font-family: Arial;
 }
 
 .splide {
+    position: relative;
+    overflow: hidden;
+    background: black;
+    &__pagination {
+        z-index: 3;
+    }
     &__slide{
         height: 700px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
 }
 
 
 
 .clouds {
     position: relative;
-    //top: 0;
-    //left: 0;
-    //width: 100%;
-    //height: 100%;
 
     pointer-events: none;
     opacity: 1;
+    z-index: 2;
 }
 
 .clouds img {
@@ -46,4 +48,11 @@ body {
         opacity: 0;
         transform: scale(1.4) translateX(-200px);
     }
+}
+
+.particles-js-canvas-el {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
 }
