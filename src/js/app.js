@@ -1,10 +1,5 @@
-//import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 import '../scss/app.scss';
-// import '@splidejs/splide/dist/css/themes/splide-sea-green.min.css';
-// import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 import 'particles.js';
-
-
 import Splide from "@splidejs/splide";
 
 new Splide('#splide',{
@@ -15,39 +10,35 @@ new Splide('#splide',{
 particlesJS("splide", {
     "particles":{
         "number":{
-            "value":300,
+            "value":50,
             "density":{
                 "enable":true,
-                "value_area":4000
+                "value_area":1000
             }
         },
         "color":{
-            "value":"#666"
+            "value":"#FFFFFF"
         },
         "shape":{
             "type":"circle",
-            "stroke":{
-                "width":0,
-                "color":"#000000"
-            },
         },
         "opacity":{
-            "value":1,
+            "value":0.3,
             "random":true,
             "anim":{
                 "enable":false,
-                "speed":4,
-                "opacity_min":0.3,
+                "speed":3,
+                "opacity_min":0.05,
                 "sync":false
             }
         },
         "size":{
-            "value":2,
+            "value": 2,
             "random":true,
             "anim":{
                 "enable":true,
-                "speed":5,
-                "size_min":0.01,
+                "speed":3,
+                "size_min":0.1,
                 "sync":false
             }
         },
@@ -56,7 +47,7 @@ particlesJS("splide", {
         },
         "move":{
             "enable":true,
-            "speed":2.8,
+            "speed":1,
             "direction":"top",
             "random":true,
             "straight":false,

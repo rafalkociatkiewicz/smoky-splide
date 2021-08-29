@@ -1,21 +1,32 @@
 body {
     background: white;
-    color: darkblue;
+    color: white;
     font-family: Arial;
 }
 
 .splide {
     position: relative;
     overflow: hidden;
-    background: black;
+    background: url('../static/images/splide-background.webp') white bottom center;
+    background-size: cover;
     &__pagination {
         z-index: 3;
     }
     &__slide{
-        height: 700px;
+        height: 1300px;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 100%;
+        overflow: hidden;
+
+        h1 {
+            position: absolute;;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 16em;
+        }
     }
 }
 
@@ -23,30 +34,53 @@ body {
 
 .clouds {
     position: relative;
-
     pointer-events: none;
     opacity: 1;
     z-index: 2;
+
 }
 
-.clouds img {
+.cloudLeft {
     position: absolute;
-    bottom: 0;
+    bottom: -300px;
+    right: 20%;
     max-width: 100%;
-    animation: animateClouds calc(2s * var(--i)) linear infinite;
+    animation: animateClouds_left calc(5s * var(--i)) linear infinite;
+
+}
+.cloudRight {
+    position: absolute;
+    bottom: -300px;
+    left: 20%;
+    max-width: 100%;
+    animation: animateClouds_right calc(5s * var(--i)) linear infinite;
 }
 
-@keyframes animateClouds {
+
+@keyframes animateClouds_left {
     0% {
         opacity: 0;
-        transform: scale(1);
+        transform: scale(0.6);
     }
     40%, 50%{
-        opacity: 1;
+        opacity: 0.7;
     }
     100% {
         opacity: 0;
-        transform: scale(1.4) translateX(-200px);
+        transform: scale(1.1) translateX(-400px);
+    }
+}
+@keyframes animateClouds_right {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    40%, 50%{
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.1) translateX(400px);
     }
 }
 
