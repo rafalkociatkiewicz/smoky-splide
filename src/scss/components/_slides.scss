@@ -1,0 +1,49 @@
+body {
+    background: black;
+    color: darkblue;
+    font-family: Arial;
+}
+
+.splide {
+    &__slide{
+        height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+
+
+.clouds {
+    position: relative;
+    //top: 0;
+    //left: 0;
+    //width: 100%;
+    //height: 100%;
+
+    pointer-events: none;
+    opacity: 1;
+}
+
+.clouds img {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: animateClouds calc(2s * var(--i)) linear infinite;
+}
+
+@keyframes animateClouds {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    40%, 50%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.4) translateX(-200px);
+    }
+}
