@@ -12,8 +12,8 @@ particlesJS("splide", {
         "number":{
             "value":50,
             "density":{
-                "enable":true,
-                "value_area":1000
+                "enable":false,
+                "value_area":10
             }
         },
         "color":{
@@ -73,3 +73,4 @@ particlesJS("splide", {
     },
     "retina_detect":true
 });
+
