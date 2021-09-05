@@ -1,5 +1,7 @@
 .header {
-  border-bottom: 1px solid rgba(255,255,255,0.5);
-  margin-bottom: -10px;
+  border-bottom: 1px solid $transparent-white;
+  color: $transparent-white;
+  margin-bottom: -30px;
   position: relative;
+  z-index: 1;
 }

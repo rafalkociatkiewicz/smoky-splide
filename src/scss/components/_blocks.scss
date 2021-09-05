@@ -1,5 +1,9 @@
 .blocks {
+  aspect-ratio: 1;
+  display: flex;
   &__item {
+    display: block;
+    background: $light-gray;
 
   }
   &__name {
